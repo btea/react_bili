@@ -10,7 +10,7 @@ export default class NavTitle extends React.Component{
     }
     $click(e){
         let target = e.target;
-        let _index = +target.getAttribute('id')
+        let _index = +target.getAttribute('id');
         this.setState({
             index: _index ,
             left: 0.2*_index + 0.02
