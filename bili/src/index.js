@@ -23,8 +23,7 @@ class Cover extends React.Component{
                     {/*页头导航栏*/}
                     <Nav/>
                     {/*首页展示*/}
-                    <Animate columnWords="热门推荐" left="bianjituijian" rightWords="排行榜" url="http://api.bilibili.com/x/web-interface/ranking/index?day=3"/>
-                    <Animate columnWords="动画" left="zhibo" rightWords="查看更多" url="https://api.bilibili.com/x/web-interface/dynamic/region?rid=1&jsonp=jsonp"/>
+                    <Animate />
                     {/*<Comic/>*/}
                 </div>
         );
