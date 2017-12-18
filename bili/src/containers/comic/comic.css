@@ -1,0 +1,25 @@
+.container{
+    height: 30px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 15px 10px;
+}
+.container .title{
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    line-height: 30px;
+    text-align: center;
+}
+.container .scrollContainer{
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.container .active.title{color: #FF7096;}
+.container .index_line{
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #6cf;
+}

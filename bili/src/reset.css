@@ -1,0 +1,165 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+
+small {
+  font-size: 12px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+legend {
+  color: #000;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearfix:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.boxshow {
+  -webkit-box-shadow: 1px 1px 14px -5px #999999;
+  box-shadow: 1px 1px 14px -5px #999999;
+}
+
+.tabs_chat_boxshow {
+  -webkit-box-shadow: 1px 1px 14px -5px #999999;
+  box-shadow: 1px 1px 14px -5px #999999;
+  border-left: 4px solid #fb5e2b;
+}
+
+
+/* 滚动条样式 */
+/* 定义滚动条整体部分 */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  opacity: 0;
+}
+/*定义滚动条轨道*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #ffffff;
+  border-radius: 10px;
+  background-color: #ffffff;
+  opacity: 0;
+}
+/*定义滑动条滑块*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px #ffffff;
+  background-color: #ffffff;
+  opacity: 0;
+}
+
+
+/* 单独设置聊天框的滑动条样式 */
+.chating_info::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #f3f3f3;
+  border-radius: 10px;
+  background-color:#f3f3f3;
+  opacity: 0;
+}
+.chating_info::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px #eeeeee;
+  background-color: #eeeeee;
+  opacity: 0;
+}
+
+

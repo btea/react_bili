@@ -1,0 +1,107 @@
+body{
+    background: #000000;
+    color: #ffffff;
+    font-family: 微软雅黑;
+    font-size: 15px;
+}
+#header{position: relative;}
+#header:after{
+    content: '';
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    clear: both;
+}
+#header li{
+    height: 25px;
+    float: left;
+    margin: 10px 0;
+    width: 20%;
+    color: #fff;
+    text-align: center;
+    font-family: '微软雅黑';
+    font-size: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#header .active-title{
+    color: #FB7299;
+}
+#header .border-bottom{
+    width: 16%;
+    background: #FB7299;
+    height: 3px;
+    position: absolute;
+    /*left: 2%;*/
+    bottom: -3px;
+    transition: all 0.15s ease-in-out;
+}
+
+.carousel{
+    margin: 10px 15px;
+    padding: 0;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.carousel .cal{
+    width: 500%;
+    height: 100px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.carousel .cal:after{
+    content: '';
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    display: block;
+}
+.carousel .cal li{
+    float: left;
+    width: 20%;
+}
+.carousel .cal li a{
+    display: block;
+    width: 100%;
+}
+.carousel img{
+    width: inherit;
+    height: 100px;
+}
+/*svg图标样式修改*/
+svg{
+    /*display: block;*/
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    fill: #6cf;
+}
+.icon_index_recommend{
+    width: 24px;
+    height: 24px;
+}
+.index_icon_more .icon_index_recommend_gengduo{
+    height: 18px;
+    width: 18px;
+    fill: #fff;
+}
+.index_icon_rank .icon_index_recommend_paihangbang1{
+    height: 25px;
+    width: 35px;
+    fill: #ffa726;
+}
+.index_icon1_recommend .index_words_rank{
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+}
