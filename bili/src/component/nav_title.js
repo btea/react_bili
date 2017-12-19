@@ -1,11 +1,13 @@
 import React from 'react';
+import './nav_title.css';
 
 export default class NavTitle extends React.Component{
     constructor(props){
         super(props);
         this.state = {
             index: 0,
-            left: 0.02
+            left: 0.02,
+            information: ['首页','动画','番剧','国创','音乐']
         }
     }
     $click(e){
@@ -19,14 +21,27 @@ export default class NavTitle extends React.Component{
     }
     render(){
         return(
-            <ul id="header">
-                <li className= {0 === this.state.index ? 'active-title' : 'title'} onClick={(e) => this.$click(e)} id="0">首页</li>
-                <li className= {1 === this.state.index ? 'active-title' : 'title'} onClick={(e) => this.$click(e)} id="1">动画</li>
-                <li className= {2 === this.state.index ? 'active-title' : 'title'} onClick={(e) => this.$click(e)} id="2">番剧</li>
-                <li className= {3 === this.state.index ? 'active-title' : 'title'} onClick={(e) => this.$click(e)} id="3">国创</li>
-                <li className= {4 === this.state.index ? 'active-title' : 'title'} onClick={(e) => this.$click(e)} id="4">音乐</li>
-                <div className="border-bottom" style={{left: this.state.left * 100 +'%'}}></div>
-            </ul>
+            <div className="index_top_area">
+                <div className="index_topArea">
+                    <a href="" className="index_logo">
+                        <img src="https://s1.hdslb.com/bfs/static/mult/images/logo.png" alt=""/>
+                    </a>
+                    <a href="" className="index_searchIcon">
+                        <svg className="icon_index_recommend">
+                            <use xlinkHref="#icon-sousuo"></use>
+                        </svg>
+                    </a>
+                    <a href="" className="index_myspace"></a>
+                </div>
+                <ul id="header">
+                    {
+                        this.state.information.map((item,index) => {
+                            return <li key={index} className= {index === this.state.index ? 'active-title' : 'title'} onClick={(e) => this.$click(e)} id={index}>{item}</li>
+                        })
+                    }
+                    <div className="border-bottom" style={{left: this.state.left * 100 +'%'}}></div>
+                </ul>
+            </div>
         );
     }
 }

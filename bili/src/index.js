@@ -5,7 +5,7 @@ import './index.css';
 import './reset.css';
 import Nav from './component/nav_title';
 import showCal from './reducers/carousel';
-import Animate from './component/recommend';
+import Index from './component/recommend';
 import Comic from './containers/comic/comic';
 
 
@@ -23,7 +23,7 @@ class Cover extends React.Component{
                     {/*页头导航栏*/}
                     <Nav/>
                     {/*首页展示*/}
-                    <Animate />
+                    <Index />
                     {/*<Comic/>*/}
                 </div>
         );
