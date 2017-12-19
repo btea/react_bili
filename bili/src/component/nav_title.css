@@ -1,6 +1,7 @@
 
 .index_topArea{
     height: 20px;
-    position: fixed;
-    top: 0;
+}
+.index_logo img{
+    height: 20px;
 }
