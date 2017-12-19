@@ -39,6 +39,8 @@ a{
 .recommend .recd_news .default_picture{
     position: absolute;
     z-index: 1;
+    width: 75%;
+    left: 12.5%;
 }
 .recommend .recd_news .cover_picture{
     position: absolute;
@@ -57,6 +59,7 @@ a{
 .recommend .recd_news span{
     float: left;
     margin: 0 5px;
+    font-size: 12px;
 }
 .recommend .recd_news .duration{ float: right; }
 .recommend .details .details_left:after,.recommend .details .details_right:after{
@@ -109,7 +112,7 @@ a{
     float: left;
     width: 160px;
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 32px;
 }
 .index_icon1_recommend{

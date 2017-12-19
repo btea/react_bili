@@ -11,12 +11,16 @@ export default class RecommendData extends React.Component{
     }
 
     getData = () => {
-        let url = this.props.url;
+        let url;
+        if(this.props.isRank === 'true'){
+            url = "http://api.bilibili.com/x/web-interface/ranking/index?day=3";
+        }else{
+            url = "https://api.bilibili.com/x/web-interface/dynamic/region?rid=" + this.props.rid + "&jsonp=jsonp";
+        }
         Fetch('get',url).then(
             response => response.json().then(
                 res => {
-                    console.log(res);
-                    if(Array.isArray(res.data)){
+                    if(this.props.isRank === 'true'){
                         this.setState({
                             data: res.data
                         })
@@ -25,7 +29,6 @@ export default class RecommendData extends React.Component{
                             data: res.data.archives
                         })
                     }
-
                 }
             )
         )
@@ -36,10 +39,15 @@ export default class RecommendData extends React.Component{
     }
 
     render(){
-        console.log(this.state);
         if(!this.state.data){
             return (<div>loading...</div>)
         }else{
+            let skipUrl;
+            if(this.props.isRank === 'true'){
+                skipUrl = "https://m.bilibili.com/ranking.html";
+            }else{
+                skipUrl = "https://m.bilibili.com/channel/" + this.props.rid + '.html';
+            }
             return(
                     <div className="recommend">
                         <div className="index_title_home_recommend">
@@ -50,8 +58,8 @@ export default class RecommendData extends React.Component{
                             </div>
                             <p className="index_hot_recommend">{this.props.columnWords}</p>
                         </div>
-                        <a href="https://m.bilibili.com/ranking.html" className="index_icon1_recommend">
-                            <div className="index_icon_rank">
+                        <a href={skipUrl} className="index_icon1_recommend">
+                            <div className="index_icon_rank" style={{display: this.props.isRank === 'true' ? 'block': 'none'}}>
                                 <svg className="icon_index_recommend_paihangbang1">
                                     <use xlinkHref="#icon-paihangbang1"></use>
                                 </svg>

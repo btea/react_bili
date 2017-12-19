@@ -94,11 +94,13 @@ svg{
     height: 18px;
     width: 18px;
     fill: #fff;
+    margin-top: 2px;
 }
 .index_icon_rank .icon_index_recommend_paihangbang1{
-    height: 25px;
+    height: 20px;
     width: 35px;
     fill: #ffa726;
+    margin-top: 2px;
 }
 .index_icon1_recommend .index_words_rank{
     height: 25px;
