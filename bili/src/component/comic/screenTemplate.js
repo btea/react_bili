@@ -16,11 +16,9 @@ export default class View extends React.Component{
             .then(
                 res => {
                     res.json().then(response => {
-                        console.log(response);
                         this.setState({
                             obtainData: response.recommend.list
-                        })
-                        console.log(this.state);
+                        });
                     })
                 }
             )

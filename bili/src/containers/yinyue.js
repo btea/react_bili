@@ -5,7 +5,7 @@ export default class Yinyue extends React.Component{
         super(props)
     }
     render(){
-        return <div>yinyuequ</div>
+        return <div className="router">yinyuequ</div>
     }
 }
 

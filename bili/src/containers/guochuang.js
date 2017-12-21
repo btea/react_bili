@@ -5,6 +5,6 @@ export default class Guochuang extends React.Component{
         super(props)
     }
     render(){
-        return <div>guochuangqu</div>
+        return <div className="router">guochuangqu</div>
     }
 }

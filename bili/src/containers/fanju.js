@@ -6,6 +6,6 @@ export default class Fanju extends React.Component{
     }
     render(){
         console.log(this.props)
-        return <div>fanjuqu</div>
+        return <div className="router">fanjuqu</div>
     }
 }

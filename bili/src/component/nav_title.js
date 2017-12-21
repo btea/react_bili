@@ -1,7 +1,11 @@
 import React from 'react';
-import {BrowserRouter as Router,Link} from 'react-router-dom';
+import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './nav_title.css';
-
+import Index from './recommend';
+import Comic from './comic/screenTemplate';
+import Fanju from '../containers/fanju';
+import Guochuang from '../containers/guochuang';
+import Yinyue from '../containers/yinyue';
 
 
 export default class NavTitle extends React.Component{
@@ -38,6 +42,7 @@ export default class NavTitle extends React.Component{
                     <a href="" className="index_myspace"></a>
                 </div>
                 <Router>
+                    <div style={{overflow:'auto'}}>
                     <ul id="header">
                     {
                         this.state.information.map((item,index) => {
@@ -50,6 +55,12 @@ export default class NavTitle extends React.Component{
                     }
                     <div className="border-bottom" style={{left: this.state.left * 100 +'%'}}></div>
                     </ul>
+                        <Route exact path="/" component={Index}/>
+                        <Route path="/comic" component={Comic}/>
+                        <Route path="/fanju" component={Fanju}/>
+                        <Route path="/guochaung" component={Guochuang}/>
+                        <Route path="/yinyue" component={Yinyue}/>
+                    </div>
                 </Router>
             </div>
         );

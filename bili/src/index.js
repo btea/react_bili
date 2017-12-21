@@ -15,7 +15,7 @@ class Cover extends React.Component{
         return(
             <div>
                 <Nav/>
-                <ReactRoad/>
+                {/*<ReactRoad/>*/}
                 {/*首页展示*/}
             </div>
 
