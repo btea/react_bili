@@ -20,6 +20,7 @@ export default class RecommendData extends React.Component{
         Fetch('get',url).then(
             response => response.json().then(
                 res => {
+                    console.log(res);
                     if(this.props.isRank === 'true'){
                         this.setState({
                             data: res.data

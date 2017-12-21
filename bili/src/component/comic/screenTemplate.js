@@ -31,7 +31,6 @@ export default class View extends React.Component{
     }
 
     render(){
-        console.log(this.state.obtainData);
         if(this.state.obtainData){
             return <div className={this.props.name}>
                 {

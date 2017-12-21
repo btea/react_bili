@@ -1,6 +1,6 @@
 import React from 'react';
 import Containers from './container';
-import View from '../../component/comic/smallView';
+import View from '../../component/comic/screenTemplate';
 import './comic.css';
 
 

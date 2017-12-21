@@ -1,10 +1,7 @@
 import React from 'react';
-// import {
-//     BrowserRouter,
-//     Route,
-//     Link
-// } from 'react-router-dom';
+import {BrowserRouter as Router,Link} from 'react-router-dom';
 import './nav_title.css';
+
 
 
 export default class NavTitle extends React.Component{
@@ -14,8 +11,7 @@ export default class NavTitle extends React.Component{
             index: 0,
             left: 0.02,
             information: ['首页','动画','番剧','国创','音乐'],
-            link: ['/','comic','fanju','guochaung','yinyue'],
-            Components: ['Index','Comic','Guochuang','Yinyue']
+            link: ['/','comic','fanju','guochaung','yinyue']
         }
     }
     $click(e){
@@ -41,26 +37,22 @@ export default class NavTitle extends React.Component{
                     </a>
                     <a href="" className="index_myspace"></a>
                 </div>
-                <ul id="header">
+                <Router>
+                    <ul id="header">
                     {
                         this.state.information.map((item,index) => {
-                            return <li key={index} className= {index === this.state.index ? 'active-title' : 'title'} onClick={(e) => this.$click(e)} id={index}>{item}</li>
+                            return (
+                                <li key={index} className= {index === this.state.index ? 'active-title' : 'title'}  id={index}>
+                                    <Link to={this.state.link[index]} key={index}>{item} </Link>
+                                </li>
+                            )
                         })
                     }
                     <div className="border-bottom" style={{left: this.state.left * 100 +'%'}}></div>
-                </ul>
+                    </ul>
+                </Router>
             </div>
         );
     }
 }
 
-// export default  class NavRouter extends React.Component{
-//     render(){
-//         retunr(
-//             <BrowserRouter>
-//                 <NavTitle/>
-//             </BrowserRouter>
-//         )
-//
-//     }
-// }
