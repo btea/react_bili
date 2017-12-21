@@ -11,7 +11,7 @@ export default class Comic extends React.Component{
 
     render(){
         return (
-            <div className="comic">
+            <div className="recommend">
                 <Containers/>
                 <View/>
             </div>

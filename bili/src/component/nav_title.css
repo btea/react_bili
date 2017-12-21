@@ -1,17 +1,22 @@
 .index_top_area{
-    position: fixed;
+    /*position: fixed;*/
     /*position: sticky;*/
-    top: 0;
-    left: 0;
+    /*top: 0;*/
+    /*left: 0;*/
     width: 100%;
     background: #000;
-    z-index: 5;
+    /*z-index: 5;*/
 }
+
 .index_topArea{
     width: 100%;
     height: 30px;
     padding: 5px 0 0 10px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: #000000;
 }
 .index_logo img{
     height: 20px;

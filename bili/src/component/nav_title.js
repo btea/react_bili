@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './nav_title.css';
 import Index from './recommend';
-import Comic from './comic/screenTemplate';
+import Comic from '../containers/comic/comic';
 import Fanju from '../containers/fanju';
 import Guochuang from '../containers/guochuang';
 import Yinyue from '../containers/yinyue';
@@ -19,7 +19,7 @@ export default class NavTitle extends React.Component{
         }
     }
     $click(e){
-        let target = e.target;
+        let target = e.target.parentNode;
         let _index = +target.getAttribute('id');
         this.setState({
             index: _index ,
@@ -42,12 +42,12 @@ export default class NavTitle extends React.Component{
                     <a href="" className="index_myspace"></a>
                 </div>
                 <Router>
-                    <div style={{overflow:'auto'}}>
+                    <div>
                     <ul id="header">
                     {
                         this.state.information.map((item,index) => {
                             return (
-                                <li key={index} className= {index === this.state.index ? 'active-title' : 'title'}  id={index}>
+                                <li key={index} onClick={e => {this.$click(e)}} className= {index === this.state.index ? 'active-title' : 'title'}  id={index}>
                                     <Link to={this.state.link[index]} key={index}>{item} </Link>
                                 </li>
                             )
@@ -66,4 +66,3 @@ export default class NavTitle extends React.Component{
         );
     }
 }
-

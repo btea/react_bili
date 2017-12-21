@@ -40,7 +40,7 @@ export default class View extends React.Component{
             </div>
         }else{
             return(
-                <div>2333333</div>
+                <div>loading···</div>
             )
         }
     }
