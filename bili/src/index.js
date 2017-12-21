@@ -6,7 +6,6 @@ import Nav from './component/nav_title';
 import Index from './component/recommend';
 import Comic from './containers/comic/comic';
 
-
 class Cover extends React.Component{
     constructor(props){
         super(props);

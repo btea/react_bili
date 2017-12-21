@@ -1,5 +1,6 @@
 a{
     color: #ffffff;
+    display: inline-block;
 }
 .recommend{
     margin: 15px;
@@ -75,10 +76,10 @@ a{
     width: 100%;
     font-size: 12px;
     overflow: hidden;
-    /*text-overflow: ellipsis;*/
-    /*display: -webkit-box;*/
-    /*-webkit-box-orient: vertical;*/
-    /*-webkit-line-clamp: 2;*/
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
     height: 35px;
     background: rgb(222,222,222);
     border-bottom-left-radius: 3px;
@@ -87,7 +88,7 @@ a{
 .recommend .type{
     font-size: 12px;
 }
-
+.index_recommend{margin-top: 90px;}
 /*svg图标样式*/
 .index_icon1_recommend:after,.index_title_home_recommend::after{
     content: '';

@@ -1,7 +1,35 @@
 
+.index_top_area{
+    position: fixed;
+    /*position: sticky;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    z-index: 5;
+}
 .index_topArea{
-    height: 20px;
+    width: 100%;
+    height: 30px;
+    padding: 5px 0 0 10px;
+    position: relative;
 }
 .index_logo img{
     height: 20px;
 }
+.index_topArea .index_myspace{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: url("../images/noface.gif") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    right: 25px;
+    top: 5px;
+}
+.index_topArea .index_searchIcon{
+    position: absolute;
+    right: 70px;
+    top: 5px;
+}
+.index_topArea .index_searchIcon svg{fill:#fff;}

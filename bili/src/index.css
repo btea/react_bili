@@ -4,7 +4,9 @@ body{
     font-family: 微软雅黑;
     font-size: 15px;
 }
-#header{position: relative;}
+#header{
+    position: relative;
+}
 #header:after{
     content: '';
     display: block;
@@ -15,7 +17,8 @@ body{
 }
 #header li{
     height: 25px;
-    float: left;
+    /*float: left;*/
+    display: inline-block;
     margin: 10px 0;
     width: 20%;
     color: #fff;

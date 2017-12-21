@@ -1,5 +1,11 @@
 import React from 'react';
+// import {
+//     BrowserRouter,
+//     Route,
+//     Link
+// } from 'react-router-dom';
 import './nav_title.css';
+
 
 export default class NavTitle extends React.Component{
     constructor(props){
@@ -7,7 +13,9 @@ export default class NavTitle extends React.Component{
         this.state = {
             index: 0,
             left: 0.02,
-            information: ['首页','动画','番剧','国创','音乐']
+            information: ['首页','动画','番剧','国创','音乐'],
+            link: ['/','comic','fanju','guochaung','yinyue'],
+            Components: ['Index','Comic','Guochuang','Yinyue']
         }
     }
     $click(e){
@@ -26,7 +34,7 @@ export default class NavTitle extends React.Component{
                     <a href="" className="index_logo">
                         <img src="https://s1.hdslb.com/bfs/static/mult/images/logo.png" alt=""/>
                     </a>
-                    <a href="" className="index_searchIcon">
+                    <a href="https://m.bilibili.com/search.html" className="index_searchIcon">
                         <svg className="icon_index_recommend">
                             <use xlinkHref="#icon-sousuo"></use>
                         </svg>
@@ -45,3 +53,14 @@ export default class NavTitle extends React.Component{
         );
     }
 }
+
+// export default  class NavRouter extends React.Component{
+//     render(){
+//         retunr(
+//             <BrowserRouter>
+//                 <NavTitle/>
+//             </BrowserRouter>
+//         )
+//
+//     }
+// }
