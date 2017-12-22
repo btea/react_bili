@@ -120,3 +120,16 @@ svg{
     margin-top: 90px;
     color: #fff;
 }
+/*页面滚动到顶部
+*/
+#toTop{
+    background: url("images/ic_top.png") no-repeat ;
+    background-size: 100%;
+    width: 56px;
+    height: 56px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    display: none;
+}
